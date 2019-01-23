@@ -21,9 +21,9 @@ public class HelloStrutsDAO {
 			ResultSet rs = ps.executeQuery();
 
 			if(rs.next()){
-				dto.setResult("MySQL‚ÆÚ‘±‚Å‚«‚Ü‚·B");
+				dto.setResult("MySQLã¨æ¥ç¶šã§ãã¾ã™ã€‚");
 			}else{
-				dto.setResult("MySQL‚ÆÚ‘±‚Å‚«‚Ü‚¹‚ñB");
+				dto.setResult("MySQLæ¥ç¶šã§ãã¾ã›ã‚“ã€‚");
 			}
 		}catch(SQLException e){
 			e.printStackTrace();

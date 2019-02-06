@@ -5,4 +5,4 @@
  * @author testuser
  *
  */
-package com.internousdev.webproj4.util;
+package com.internousdev.webproj5.dto;

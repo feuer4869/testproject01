@@ -22,14 +22,21 @@ public class LoginDAO {
 
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1,  username);
-			ps.setString(2,  password);
+			ps.setString(1, username);
+			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
 
 			while(rs.next()){
 				LoginDTO dto = new LoginDTO();
 				dto.setUsername(rs.getString("user_name"));
 				dto.setPassword(rs.getString("password"));
+				loginDTOList.add(dto);
+			}
+
+			if(loginDTOList.size()<=0){
+				LoginDTO dto = new LoginDTO();
+				dto.setUsername("該当なし");
+				dto.setPassword("該当なし");
 				loginDTOList.add(dto);
 			}
 		}catch(SQLException e){
